@@ -11,18 +11,25 @@ var specialChar = "!@#$%^&*()<>/{}[]_~`:;',./\|.+-";
 function generatePassword () {
   console.log ("You Clicked the button");
 // 1. Prompt for user vto ask password Criteria
- var choice =  window.prompt ("How many characters would you like for your password?")
+var password = "";
+var passwordChars = "";
 // brings up prompt!
-if (!choice) {
-  return;
-}
-// returns undefined
+ var length =  window.prompt ("How many characters would you like for your password? It needs to be between 8 and 128. Thanks <3.");
+// a. Password length between 8-128
+length = parseInt (length);
+ if (length < 8) {
+  alert("Password must contain more than 7 characters.");
+  return "";
+ } else if (length > 128) {
+  alert("Password must be less than 128 characters.")
+ }
 
-  // a. Password length between 8-128
-//  b.Lower, Uppercase, numbers, special characters
+ //  b.Lower, Uppercase, numbers, special characters
+ var littleLetters = confirm("Would you like to add some little letters?")
+
 // 2. After the prompt, validate input and 1 character type should be selected 
 // 3. When all prompts answered, generate password with the selected criteria
-
+ 
 
 
 
