@@ -6,12 +6,15 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbericalChar = "0123456789";
 var specialChar = "!@#$%^&*()<>/{}[]_~`:;',./\|.+-";
 
-
-// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
+  // Write password to the #password input
 function generatePassword () {
   console.log ("You Clicked the button");
 // 1. Prompt for user vto ask password Criteria
-var password = "";
 var passwordChars = "";
 // brings up prompt!
  var length =  window.prompt ("How many characters would you like for your password? It needs to be between 8 and 128. Thanks <3.");
@@ -25,8 +28,16 @@ length = parseInt (length);
  }
 
  //  b.Lower, Uppercase, numbers, special characters
- var littleLetters = confirm("Would you like to add some little letters?")
+ var littleLetters = confirm("Would you like to add some little letters?");
 
+if(littleLetters){
+  passwordChars += lowerCase;
+}
+
+var bigLetters = confirm("Would you like to add BIG LETTERS?");
+ if (bigLetters) {
+  password += upperCase;
+ }
 // 2. After the prompt, validate input and 1 character type should be selected 
 // 3. When all prompts answered, generate password with the selected criteria
  
@@ -35,15 +46,8 @@ length = parseInt (length);
 
 
 // 4. write password to page. 
-  return "Generated Password, will go here.";
+ return "Generated Password, will go here.";
 }
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
-
 // Add event listener to generate buttoN
 // when button clicked, runs function
 generateBtn.addEventListener("click", writePassword); 
