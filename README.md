@@ -11,3 +11,10 @@
     - Uppercase lettering, lowercase lettering, numbers, or special characters.
 
 #### See below for Screenshot of page 
+![initial page](./Assets/images/Initial-page.png)
+![first-prompt](./Assets/images/First-prompt.PNG)
+![second-prompt](./Assets/images/second-prompt.PNG)
+![third-prompt](./Assets/images/third-prompt.PNG)
+![fourth-prompt](./Assets/images/fourth-prompt.PNG)
+![fifth-prompt](./Assets/images/fifth-prompt.PNG)
+![password](./Assets/images/password.PNG)
